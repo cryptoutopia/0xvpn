@@ -1,0 +1,6 @@
+Django
+sqlalchemy
+segno
+requests
+ecdsa
+whitenoise

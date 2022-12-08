@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+  <div class="col-6 mx-auto">
+    <h1>Buy VPN quickly using Bitcoin</h1>
+  </div>
+  </div>
+<div class="row justify-contents-center">
+  <div class="col-6 mx-auto my-3">
+      <div class="my-3">
+        <h3>How it works?</h3>
+        <p>It's simple. Click on the `buy vpn` button bellow, transfer bitcoin to the generated invoice or pay with lightning.
+As soon as a payment is detected you receive your VPN configurations.
+        </p>
+        <p>Currently we offer only one plan <b>1€ for 30 days</b> with only one endpoint.</p>
+        <p>There is no any kind of logging, information gathering or throttling. Speeds are dependent on the current usage.</p>
+      </div>
+
+      <div class="vstack gap-2 col-12 mx-auto">
+        <div class="mx-auto">
+          <a href="{%url 'checkout'%}">
+            <button type="button" class="btn btn-secondary">Buy VPN</button>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="my-3">
+        <p> To start using the VPN, you're going to need Wireguard. Instructions bellow</p>
+        <div class="vstack gap-2 col-md-5 mx-auto">
+          <button type="button" class="btn btn-outline-secondary"><a href="https://www.wireguard.com/">What is Wireguard?</a></button>
+          <button type="button" class="btn btn-outline-secondary"><a href="https://download.wireguard.com/windows-client/wireguard-installer.exe">Windows</a></button>
+          <button type="button" class="btn btn-outline-secondary"><a href="https://apps.apple.com/us/app/wireguard/id1451685025?ls=1&mt=12">macOS</a></button>
+          <button type="button" class="btn btn-outline-secondary"><a href="https://www.wireguard.com/install/">Linux</a></button>
+          <button type="button" class="btn btn-outline-secondary"><a href="https://play.google.com/store/apps/details?id=com.wireguard.android">Android</a></button>
+          <button type="button" class="btn btn-outline-secondary"><a href="https://itunes.apple.com/us/app/wireguard/id1441195209?ls=1&mt=8">iOS</a></button>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-6 mx-auto">
+    <h1 class="text-center">Stats</h1>
+    <table class="table table-dark table-striped-columns">
+      <tr>
+        <td>Status</td>
+        <td><span style="color: #8ce605">OK</span></td>
+      </tr>
+      <tr>
+        <td>Connections</td>
+        <td>{{ connections}}</td>
+      </tr>
+    </table>
+
+  </div>
+
+  
+  </div>
+
+{% endblock %}

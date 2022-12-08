@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<meta http-equiv="refresh" content="30">
+<div class="row justify-content-center">
+
+  <div class="col-6 mx-auto">
+    <h2>Make the payment bellow</h2>
+    <h5 class="ms-auto d-inline-block">page will refresh autmatically ...</h5>
+    <div class="my-3 mx-auto">
+      <div class="d-flex flex-column">
+        <div>
+          <p>Amount: <b>EUR 1</b></p>
+        </div>
+        <div>
+          {{ btcqr | safe }}
+        </div>
+        <div>
+          <a href="{{ paymentUrl }}">Payment URL</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

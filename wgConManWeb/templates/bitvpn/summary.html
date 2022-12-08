@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+
+
+<div class="row justify-content-center">
+    {% if not status %}
+    <div class="col-6 mx-auto my-3">
+      <div><!--invoice not payed -->
+        <h2>{{ error }}</h2>
+      </div>  
+    </div>          
+    {% endif %}
+    {% if status %}
+    <div class="col-6 mx-auto my-3">
+      <div><!-- payed - configs here --> 
+        <div>
+          <h2>Thank you for ordering !!</h2>
+          <p>Please save the following configurations as they will be gone as soon as you close the page.</p>
+        </div>
+        <div>
+          <h5>Import configuration from a QR code</h5>
+          <div class="my-3">
+            {{ qr | safe }}
+          </div>
+
+          <h5>Import configuration from text</h5>
+          <pre>
+{{ txtcfg | safe }}
+          </pre>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

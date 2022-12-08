@@ -1,0 +1,9 @@
+*.sqlite3
+*.conf
+*.bak
+settings.py
+ckies.json
+node_modules/
+_vendor/
+package-lock.json
+__pycache__/
